@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.scientificeducation.fragments.HomeFragment"
+        android:label="Asosiy sahifa"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_home_to_lecturesFragment"
+            app:destination="@id/lecturesFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_videoLessonsFragment"
+            app:destination="@id/videoLessonsFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_practicalFragment"
+            app:destination="@id/practicalFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_questionsFragment"
+            app:destination="@id/questionsFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_testFragment"
+            app:destination="@id/testFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.scientificeducation.ui.gallery.GalleryFragment"
+        android:label="Loyiha muallifi"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.scientificeducation.ui.slideshow.SlideshowFragment"
+        android:label="Ulashish"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/lecturesFragment"
+        android:name="com.example.scientificeducation.fragments.LecturesFragment"
+        android:label="Ma'ruzalar ro'yhati"
+        tools:layout="@layout/fragment_lectures">
+        <action
+            android:id="@+id/action_lecturesFragment_to_lectureInfoFragment"
+            app:destination="@id/lectureInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoLessonsFragment"
+        android:name="com.example.scientificeducation.fragments.VideoLessonsFragment"
+        android:label="Ilmiy ta'lim haqida kitob"
+        tools:layout="@layout/fragment_video_lessons" >
+        <action
+            android:id="@+id/action_videoLessonsFragment_to_videoInfoFragment"
+            app:destination="@id/videoInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lectureInfoFragment"
+        android:name="com.example.scientificeducation.fragments.LectureInfoFragment"
+        android:label="Ma'ruza"
+        tools:layout="@layout/fragment_lecture_info" />
+    <fragment
+        android:id="@+id/practicalFragment"
+        android:name="com.example.scientificeducation.fragments.PracticalFragment"
+        android:label="Amaliy mashg'ulotlar ro'yhati"
+        tools:layout="@layout/fragment_practical">
+        <action
+            android:id="@+id/action_practicalFragment_to_practicalInfoFragment"
+            app:destination="@id/practicalInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionsFragment"
+        android:name="com.example.scientificeducation.fragments.QuestionsFragment"
+        android:label="fragment_questions"
+        tools:layout="@layout/fragment_questions">
+        <action
+            android:id="@+id/action_questionsFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.scientificeducation.fragments.TestFragment"
+        android:label="fragment_test"
+        tools:layout="@layout/fragment_test">
+        <action
+            android:id="@+id/action_testFragment_to_questionsFragment"
+            app:destination="@id/questionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.scientificeducation.fragments.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/practicalInfoFragment"
+        android:name="com.example.scientificeducation.fragments.PracticalInfoFragment"
+        android:label="Amaliy mashg'ulot"
+        tools:layout="@layout/fragment_practica_info" />
+    <fragment
+        android:id="@+id/videoInfoFragment"
+        android:name="com.example.scientificeducation.fragments.VideoInfoFragment"
+        android:label="Qo'llanma"
+        tools:layout="@layout/fragment_video_info" />
+</navigation>

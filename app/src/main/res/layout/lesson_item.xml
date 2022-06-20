@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="145dp"
+    android:layout_marginLeft="24dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="24dp"
+    android:layout_marginBottom="10dp"
+    android:gravity="center"
+    app:cardCornerRadius="9dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:id="@+id/image_view"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/image_lesson"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="#E3EAF8"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/lesson_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/inter"
+                android:maxLines="2"
+                android:text="Welcome to the world of Multimedia"
+                android:textColor="@color/basic_color3"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/postLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/number_circle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/postLayout"
+            app:layout_constraintLeft_toLeftOf="@id/postLayout"
+            app:layout_constraintRight_toRightOf="@id/postLayout"
+            app:layout_constraintTop_toTopOf="@id/postLayout" />
+
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/next_item"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_navigate_next_24"
+            app:layout_constraintBottom_toBottomOf="@id/next"
+            app:layout_constraintLeft_toLeftOf="@id/next"
+            app:layout_constraintRight_toRightOf="@id/next"
+            app:layout_constraintTop_toTopOf="@id/next" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
